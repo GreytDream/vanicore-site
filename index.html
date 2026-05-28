@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VANICORE — Приватный Ванильный Сервер Minecraft</title>
+    <link href="https://cdn.jsdelivr.net/npm/fontsource-inter@5.0.0/400.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/fontsource-inter@5.0.0/600.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/fontsource-inter@5.0.0/700.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/fontsource-inter@5.0.0/800.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="hero-bg"></div>
+
+    <nav id="mainNav">
+        <div class="nav-logo">VANICORE</div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home">Главная</a></li>
+            <li><a href="#features">Особенности</a></li>
+            <li><a href="#about">О сервере</a></li>
+            <li><a href="#rules">Правила</a></li>
+            <li><a href="#join">Как начать</a></li>
+        </ul>
+        <div class="nav-actions">
+            <button id="vModeBtn" class="v-mode-btn" aria-label="Сменить режим">☀️</button>
+            <button class="nav-toggle" id="navToggle" aria-label="Меню">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="bubbles-container" id="bubbles"></div>
+
+        <div class="hero-logo-container">
+            <img src="logo.png" alt="VANICORE Logo" class="custom-logo">
+        </div>
+
+        <p class="hero-subtitle">Погрузись в мир ванили без приватов и гриферства. Играй с друзьями и изучайте вместе лор.</p>
+        <div class="hero-buttons">
+            <a href="#join" class="btn-primary">🎮 Начать играть</a>
+            <a href="#features" class="btn-secondary">🌊 Узнать больше</a>
+        </div>
+        <div class="server-ip" id="serverIp" onclick="copyIP()">
+            <svg class="copy-icon" viewBox="0 0 24 24">
+                <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z" />
+            </svg>
+            <code>play.vanicore.online</code>
+            <span class="copy-tooltip" id="copyTooltip">✓ Скопировано!</span>
+        </div>
+    </section>
+
+    <div class="wave-divider">
+        <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+            <path d="M0,40 C360,80 720,0 1080,40 C1260,60 1380,50 1440,40 L1440,80 L0,80 Z" fill="rgba(112,255,249,0.03)" />
+            <path d="M0,50 C360,20 720,70 1080,30 C1260,15 1380,45 1440,50 L1440,80 L0,80 Z" fill="rgba(112,255,249,0.05)" />
+        </svg>
+    </div>
+
+    <section id="features" class="glass-section">
+        <h2 class="section-title fade-in">Почему <span>VANICORE</span>?</h2>
+        <p class="section-subtitle fade-in">И зачем делать платный проход?</p>
+        <div class="features-grid">
+            <div class="feature-card fade-in">
+                <div class="feature-icon">🔒</div>
+                <h3>Приватный доступ</h3>
+                <p>Сервер закрыт для случайных игроков. Это сделано ради того, чтобы не было неадекватов.</p>
+            </div>
+            <div class="feature-card fade-in">
+                <div class="feature-icon">⚡</div>
+                <h3>Стабильный хостинг</h3>
+                <p>Мощный выделенный сервер с низким пингом. Играй без лагов и вылетов 24/7.</p>
+            </div>
+            <div class="feature-card fade-in">
+                <div class="feature-icon">🗺️</div>
+                <h3>Ограниченный мир</h3>
+                <p>Актуально для этого сервера игроки будут закрыты на большом архипелаге без выхода к морю.</p>
+            </div>
+            <div class="feature-card fade-in">
+                <div class="feature-icon">🛡️</div>
+                <h3>Античит и защита</h3>
+                <p>Базовая защита от читеров и гриферов. Честная игра — наш главный принцип на сервере.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="glass-section">
+        <h2 class="section-title fade-in">О нашем <span>сервере</span></h2>
+        <p class="section-subtitle fade-in">Больше, чем просто сервер</p>
+        <div class="about-content fade-in">
+            <div class="about-text">
+                <p><span>VANICORE</span> — это приватный ванильный сервер Minecraft, вдохновлённый известным сервером как MineShild.</p>
+                <p>Наш сервер работает на версии 1.21.11, предлагая всем актуальный контент и возможности. Мы ценим каждого игрока и стремимся создать максимально комфортную среду для творчества и выживания.</p>
+                <p>Присоединяйся к нашему Discord сообществу и открой для себя новый мир!</p>
+                <p>(Скачать готовую сборку можно скачать в <a href="https://discord.gg/GvytThZHNW">Дискорд-канале</a>)</p>
+            </div>
+            
+            <div class="about-stats">
+                <a href="https://modrinth.com/plugin/simple-voice-chat" class="stat-card" target="_blank">
+                    <span class="mod-icon">🎤</span>
+                    <div class="stat-label">Voice Chat</div>
+                    <div class="stat-desc">Обязателен для общения</div>
+                </a>
+                <a href="https://modrinth.com/mod/emotecraft" class="stat-card" target="_blank">
+                    <span class="mod-icon">💃</span>
+                    <div class="stat-label">Emotecraft</div>
+                    <div class="stat-desc">Обязателен для эмоций</div>
+                </a>
+                <a href="https://modrinth.com/mod/freecam" class="stat-card" target="_blank">
+                    <span class="mod-icon">🎥</span>
+                    <div class="stat-label">Freecam</div>
+                    <div class="stat-desc">Разрешён (по желанию)</div>
+                </a>
+                <a href="https://modrinth.com/mod/litematica" class="stat-card" target="_blank">
+                    <span class="mod-icon">📐</span>
+                    <div class="stat-label">Litematica</div>
+                    <div class="stat-desc">Разрешена (по желанию)</div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="rules" class="glass-section">
+        <h2 class="section-title fade-in">Правила <span>сервера</span></h2>
+        
+        <div class="rules-container fade-in">
+            <div class="rules-preamble">
+                <strong>СВОДКА ПРАВИЛ [ VaniCore ]</strong>
+                Нахождение на сервере автоматически означает ваше согласие со всеми пунктами ниже.
+            </div>
+
+            <div class="rule-item active">
+                <div class="rule-header" onclick="toggleRule(this)">
+                    <h4><span class="rule-number">I</span> Общие положения</h4>
+                    <svg class="rule-toggle" viewBox="0 0 24 24">
+                        <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z" />
+                    </svg>
+                </div>
+                <div class="rule-content">
+                    <div class="rule-content-inner">
+                        <ul class="rule-list">
+                            <li><b>1.</b> Уважайте друг друга. Запрещены оскорбления, токсичность и травля.</li>
+                            <li><b>2.</b> Никакой политики и религии в чатах.</li>
+                            <li><b>3.</b> Основной язык общения — русский.</li>
+                            <li><b>4.</b> Запрет дискриминации по любому признаку.</li>
+                            <li><b>5.</b> Запрет деанонимизации (слив личных данных карается баном).</li>
+                            <li><b>6.</b> Вы несете ответственность за свой аккаунт. Передача третьим лицам запрещена.</li>
+                            <li><b>7.</b> Обход наказаний с твинков приведет к вечной блокировке всех ваших аккаунтов.</li>
+                            <li><b>8.</b> Запрещено распространение вредоносного ПО и фишинга.</li>
+                            <li><b>9.</b> Администрация имеет право наказывать за действия, вредящие серверу, даже если их прямо нет в правилах.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rule-item">
+                <div class="rule-header" onclick="toggleRule(this)">
+                    <h4><span class="rule-number">II</span> Текстовые и Голосовые каналы</h4>
+                    <svg class="rule-toggle" viewBox="0 0 24 24">
+                        <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z" />
+                    </svg>
+                </div>
+                <div class="rule-content">
+                    <div class="rule-content-inner">
+                        <ul class="rule-list">
+                            <li><b>10.</b> Соблюдайте тематику каналов (мемы — в мемы, вопросы — в поддержку).</li>
+                            <li><b>11.</b> Никакого спама, флуда и злоупотребления КАПСОМ.</li>
+                            <li><b>12.</b> Запрещены массовые пинги (@everyone, @here) без крайней необходимости.</li>
+                            <li><b>13.</b> Пинг администрации — только в экстренных случаях (краш сервера). Для остального есть тикеты.</li>
+                            <li><b>14.</b> Строгий запрет NSFW (18+) и шок-контента.</li>
+                            <li><b>15.</b> Реклама других проектов и услуг без разрешения запрещена.</li>
+                            <li><b>16.</b> В голосовых каналах запрещен Earrape (очень громкие звуки/крики).</li>
+                            <li><b>17.</b> Включайте шумоподавление или режим рации, если у вас сильный фон микрофона.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rule-item">
+                <div class="rule-header" onclick="toggleRule(this)">
+                    <h4><span class="rule-number">III</span> Правила игры на сервере VaniCore</h4>
+                    <svg class="rule-toggle" viewBox="0 0 24 24">
+                        <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z" />
+                    </svg>
+                </div>
+                <div class="rule-content">
+                    <div class="rule-content-inner">
+                        <ul class="rule-list">
+                            <li><b>18.</b> Использование читов (X-Ray, KillAura и т.д.) — перманентный бан. Проходка (30₽) не возвращается.</li>
+                            <li><b>19.</b> Разрешенные моды: Voice Chat, Emotecraft, Freecam (для красивых кадров), Litematica + Printer.</li>
+                            <li><b>20.</b> Гриферство чужих построек строго запрещено.</li>
+                            <li><b>21.</b> Воровство из чужих сундуков, бочек и печей запрещено.</li>
+                            <li><b>22.</b> PvP только по обоюдному согласию или РП-причине.</li>
+                            <li><b>23.</b> Использование дюпов ведет к обнулению аккаунта.</li>
+                            <li><b>24.</b> Лаг-машины для намеренного снижения TPS запрещены.</li>
+                            <li><b>25.</b> Уважайте лор: запрещено мешать другим игрокам участвовать в сюжетных ивентах.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rule-item">
+                <div class="rule-header" onclick="toggleRule(this)">
+                    <h4><span class="rule-number">IV</span> Профиль в Discord и аккаунты</h4>
+                    <svg class="rule-toggle" viewBox="0 0 24 24">
+                        <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z" />
+                    </svg>
+                </div>
+                <div class="rule-content">
+                    <div class="rule-content-inner">
+                        <ul class="rule-list">
+                            <li><b>26.</b> Ваш никнейм в Discord должен совпадать с никнеймом в игре (или содержать его в скобках).</li>
+                            <li><b>27.</b> Использование пустых, невидимых никнеймов и Zalgo-текста запрещено.</li>
+                            <li><b>28.</b> В профиле, статусе и на аватаре не должно быть рекламы, NSFW, политики и оскорблений.</li>
+                            <li><b>29.</b> Запрещены мигающие аватары, способные вызвать приступ эпилепсии.</li>
+                            <li><b>30.</b> Запрещено копировать никнеймы/аватары ютуберов, администрации или других игроков.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rule-item">
+                <div class="rule-header" onclick="toggleRule(this)">
+                    <h4><span class="rule-number">V</span> Экономика и торговля (RMT)</h4>
+                    <svg class="rule-toggle" viewBox="0 0 24 24">
+                        <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z" />
+                    </svg>
+                </div>
+                <div class="rule-content">
+                    <div class="rule-content-inner">
+                        <ul class="rule-list">
+                            <li><b>31.</b> Строго запрещена продажа и покупка игровых ресурсов или услуг за реальные деньги (RMT).</li>
+                            <li><b>32.</b> Продажа, покупка или передача аккаунта из White-list карается баном всех причастных.</li>
+                            <li><b>33.</b> Проходка (30₽) является пожертвованием на развитие сервера. Она не дает иммунитета от банов, средства при блокировке не возвращаются.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rule-item">
+                <div class="rule-header" onclick="toggleRule(this)">
+                    <h4><span class="rule-number">VI</span> Модерация и Тикеты</h4>
+                    <svg class="rule-toggle" viewBox="0 0 24 24">
+                        <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z" />
+                    </svg>
+                </div>
+                <div class="rule-content">
+                    <div class="rule-content-inner">
+                        <ul class="rule-list">
+                            <li><b>34.</b> Публичное оспаривание действий модерации в общих чатах запрещено.</li>
+                            <li><b>35.</b> Для оспаривания наказаний и жалоб используйте исключительно систему тикетов.</li>
+                            <li><b>36.</b> Флуд в тикетах или пинг модераторов без ожидания очереди приведет к муту.</li>
+                            <li><b>37.</b> Подделка доказательств (скриншотов, логов) наказывается перманентным изгнанием с проекта.</li>
+                            <li><b>38.</b> Отказ от проверки на читы или выход с сервера во время неё приравнивается к признанию вины.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rule-item">
+                <div class="rule-header" onclick="toggleRule(this)">
+                    <h4><span class="rule-number">VII</span> Контент-мейкеры и Медиа</h4>
+                    <svg class="rule-toggle" viewBox="0 0 24 24">
+                        <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z" />
+                    </svg>
+                </div>
+                <div class="rule-content">
+                    <div class="rule-content-inner">
+                        <ul class="rule-list">
+                            <li><b>39.</b> Стримснайпинг (использование чужого стрима для получения координат базы или убийства) строго запрещен.</li>
+                            <li><b>40.</b> Роль Контент-Мейкера не дает иммунитета от правил. Наказания выдаются на общих основаниях.</li>
+                            <li><b>41.</b> Приветствуется упоминание VaniCore или нашего Discord в ваших роликах и трансляциях.</li>
+                            <li><b>42.</b> Ссылки на свои видеоролики или стримы разрешено публиковать только в специальном канале для медиа.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="join" class="glass-section">
+        <h2 class="section-title fade-in">Как <span>начать играть</span></h2>
+        <p class="section-subtitle fade-in">Всего 4 простых шага до погружения в подводный мир</p>
+        <div class="join-steps fade-in">
+            <div class="join-step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h4>Подай заявку</h4>
+                    <p>Напиши нам в <a href="https://discord.gg/GvytThZHNW">Discord</a>. Расскажи о себе и почему хочешь играть на нашем сервере. Мы рассматриваем каждую заявку индивидуально.</p>
+                </div>
+            </div>
+            <div class="join-step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h4>Получи вайтлист</h4>
+                    <p>После одобрения заявки и оплаты на сервере, тебя добавят в вайтлист и ты сможешь сыграть.</p>
+                </div>
+            </div>
+            <div class="join-step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h4>Подключись к серверу</h4>
+                    <p>Открой Minecraft версии 1.21.11, скачай <b>обязательные моды</b> в <a href="https://discord.gg/GvytThZHNW">Discord-канале </a>"файлы-моды" для комфортной игры на сервере, добавь сервер с адресом
+                        <strong style="color: var(--primary)">play.vanicore.online</strong> и нажми «Подключиться».
+                    </p>
+                </div>
+            </div>
+            <div class="join-step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h4>Наслаждайся игрой!</h4>
+                    <p>Исследуй лор, строй невероятные сооружения, торгуй с другими игроками и создавай незабываемые приключения вместе с друзьями!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <img src="logo2.png" alt="VANICORE" class="footer-logo-img">
+        <p class="footer-text">© 2026 VANICORE — Приватный ванильный сервер Minecraft</p>
+        <div class="footer-links">
+            <a href="https://discord.gg/GvytThZHNW">Discord</a>
+            <a href="https://t.me/vanicorenews">Telegram</a>
+            <a href="#">YouTube</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
